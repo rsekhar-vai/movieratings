@@ -9,7 +9,7 @@ from django.contrib.auth.models import (
 from django.core.validators import MaxValueValidator, MinValueValidator
 from django.conf import settings
 
-from app.user.models import User
+from user.models import User
 
 class Movie(models.Model):
     title = models.CharField(max_length=32)

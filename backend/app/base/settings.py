@@ -40,8 +40,8 @@ INSTALLED_APPS = [
     "django.contrib.staticfiles",
     "rest_framework",
     "drf_spectacular",
-    "rest_framework.authtoken",
-    "user",
+    "rest_framework.authtoken", 
+    "user.apps.UserConfig",
     "movies",
     "utils",
 

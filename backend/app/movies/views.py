@@ -3,8 +3,8 @@ from rest_framework.response import Response
 from rest_framework.decorators import action
 from rest_framework.authentication import TokenAuthentication
 from rest_framework.permissions import IsAuthenticated, AllowAny
-from app.user.models import User 
-from app.user.serializers import UserSerializer
+from user.models import User 
+from user.serializers import UserSerializer
 from .models import Movie, Rating
 from .serializers import MovieSerializer, RatingSerializer 
 
@@ -20,7 +20,7 @@ class MovieViewSet(viewsets.ModelViewSet):
     permission_classes = (IsAuthenticated,)
 
     @action(detail=True, methods=['POST'])
-    def rate_movie(self, request, pk=None):
+    def rating(self, request, pk=None):
         if 'stars' in request.data:
 
             movie = Movie.objects.get(id=pk)
